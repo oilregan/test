@@ -1,14 +1,23 @@
 CODE
 
 // Microgear 
+
 #include <AuthClient.h>
+
 #include <debug.h>
+
 #include <MicroGear.h>
+
 #include <MQTTClient.h>
+
 #include <PubSubClient.h>
+
 #include <SHA1.h>
 
+
+
 //node
+
 
 #include <Arduino.h>
 
@@ -24,13 +33,16 @@ CODE
 
 #include <DHT_U.h>
 
+
 const char* ssid     = "iPhoneJT";
 
 const char* password = "jak123456";
 
+
 #define APPID   "Teat1"
 
 #define KEY     "1fBtuelf2lcsuq9"
+
 
 #define SECRET  "4aTlIwAkwNEkUcNf8ocR96bVX"
 
@@ -41,15 +53,18 @@ const char* password = "jak123456";
 
 DHT dht(4, DHT11);
 
+
 int moistureA0 = A0;
 
 int moisture = 0;
 
 int timer = 0;
 
+
 WiFiClient client;
 
 MicroGear microgear(client);
+
 
 void onMsghandler(char *topic, uint8_t* msg, unsigned int msglen) 
 
